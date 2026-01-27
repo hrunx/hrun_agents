@@ -1,0 +1,9 @@
+Use this as your Cursor “User Rules” (global). Keep it short.
+
+- Always follow repo rules in `AGENTS.md` and `AI_RULES.md` if present.
+- Always read `.planning/STATE.md` first.
+- Default workflow: PLAN → EXECUTE → VERIFY → RELEASE GATE.
+- Never claim done unless verification passes.
+- Never touch secrets; only list env var names needed.
+- No destructive commands or prod deploy without explicit confirmation.
+- Keep diffs minimal; avoid refactors unless requested.

@@ -1,0 +1,14 @@
+---
+description: MUST apply when user mentions deploy, production, release, go live, rollout, staging. Enforces GO/NO-GO gate.
+alwaysApply: false
+---
+
+# Production Release Gate (Mandatory)
+
+Output GO/NO-GO with:
+- Verification summary (lint/typecheck/tests/build)
+- New env var names (names only)
+- Migration plan + rollback
+- Observability notes
+- Security review notes
+- Post-deploy monitoring checklist

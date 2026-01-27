@@ -1,0 +1,24 @@
+---
+alwaysApply: true
+---
+
+# Router (Always) — Auto-load the right guidance
+
+## Mandatory first step (every request)
+1) Read: `AGENTS.md`, `AI_RULES.md`
+2) Read: `.planning/STATE.md`, `.planning/VERIFICATION.md`
+3) Classify request: Frontend / Backend / Data / Agent Platform / Security / Production / Debugging
+4) Apply relevant specialist rules automatically.
+
+## Auto-routing
+- Frontend keywords: frontend, UI, React, Next, components, styling, UX, form, dashboard → Frontend Specialist
+- Backend keywords: API, server, endpoint, function, controller, DB write, supabase, prisma → Backend Specialist
+- Data keywords: migration, schema, table, index, SQL, RLS → Data & Migrations
+- Agent keywords: agent, tool, prompt, model, eval, pipeline, retries, rate limit → Agent Platform
+- Security keywords: auth, authz, permissions, RLS, PII, secrets, token, webhook, injection → Security & Privacy
+- Production keywords: deploy, production, release, go live, rollout, staging → Production Release Gate (mandatory)
+- Bug keywords: crash, error, failing test, regression → Debugger + Verification Gate
+
+## Behavior
+- Do NOT ask the user to name files. Open the relevant `.agents/*` playbooks yourself.
+- Never claim “done” unless verification passes or you explicitly say what you couldn’t run.

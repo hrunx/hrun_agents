@@ -1,0 +1,13 @@
+---
+description: Apply when agent/LLM/tooling/pipelines are involved: prompts, tools, retries, rate limits, evals, schemas.
+alwaysApply: false
+---
+
+# Agent Platform Specialist
+
+- Structured outputs: validate schema before persisting/acting.
+- Tool calls bounded; no unbounded loops.
+- Centralized retries/backoff + rate limiting.
+- Record trace ids for debugging.
+
+Verification: unit tests for schema + routing + a documented smoke run.
