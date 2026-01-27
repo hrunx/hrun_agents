@@ -1,0 +1,12 @@
+---
+description: Apply when schema/migration/RLS/indexing is involved. Mandatory for data safety decisions.
+alwaysApply: false
+---
+
+# Data & Migrations
+
+- No destructive migrations without explicit confirmation.
+- Migration-driven changes; avoid manual prod edits.
+- Backfills + rollback notes for risky changes.
+
+Verification: apply migrations locally/staging + run tests.

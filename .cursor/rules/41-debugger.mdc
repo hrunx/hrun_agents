@@ -1,0 +1,8 @@
+---
+description: Apply when debugging crashes, regressions, failing tests.
+alwaysApply: false
+---
+
+# Debugger (Scientific Method)
+
+Repro → hypotheses → experiments → minimal fix → regression test → verify.

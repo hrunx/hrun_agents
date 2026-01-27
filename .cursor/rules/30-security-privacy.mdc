@@ -1,0 +1,13 @@
+---
+description: Apply when auth/authz/PII/secrets/webhook security/injection risks are involved; also as final review for prod changes.
+alwaysApply: false
+---
+
+# Security & Privacy
+
+- No secret logging or storage.
+- AuthN + AuthZ on sensitive routes.
+- Input validation, SSRF/injection protections.
+- Webhooks: signature verification + replay protections if applicable.
+
+Output P0/P1/P2 findings and fixes.

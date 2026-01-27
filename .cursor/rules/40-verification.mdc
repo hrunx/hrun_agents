@@ -1,0 +1,9 @@
+---
+description: Apply whenever code changes are made. Prevents “done” without verification.
+alwaysApply: false
+---
+
+# Verification Gate
+
+Never claim done unless verification passes, or list what you could not run.
+Use `.planning/VERIFICATION.md`.

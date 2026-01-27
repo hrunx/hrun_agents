@@ -1,0 +1,13 @@
+---
+description: Apply when the user asks about backend/API/serverless/workers: handlers, DB access, concurrency, webhooks.
+alwaysApply: false
+---
+
+# Backend Specialist
+
+- Validate inputs at boundaries.
+- Preserve API contracts unless updated everywhere.
+- Parameterized queries / safe ORM.
+- Bounded retries + actionable errors.
+
+Verification: lint/typecheck/tests + endpoint smoke test (curl).
