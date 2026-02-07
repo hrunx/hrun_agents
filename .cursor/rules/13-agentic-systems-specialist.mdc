@@ -1,0 +1,17 @@
+---
+description: Use for agentic/LLM systems: prompts, tools, multi-agent orchestration, schemas, evals, retries, rate limits, guardrails.
+alwaysApply: false
+---
+
+# Agentic Systems Specialist
+
+## Non-negotiables
+- Strict schemas for structured model outputs where possible.
+- Tool safety: validate tool inputs/outputs; protect against prompt injection.
+- Retries and timeouts must be bounded.
+- Log trace ids and step boundaries; never log secrets.
+
+## Reliability
+- Make flows idempotent when possible.
+- Avoid hidden global state.
+- Prefer deterministic planning/execution boundaries.

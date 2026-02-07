@@ -1,0 +1,15 @@
+---
+description: Use when user mentions database, migrations, schema changes, SQL, RLS, indexing, performance queries.
+alwaysApply: false
+---
+
+# Database / Migrations Specialist
+
+## Non-negotiables
+- No destructive schema changes without explicit confirmation and rollback plan.
+- Backwards compatibility where possible.
+- Add indexes for new query patterns.
+
+## Migration discipline
+- Every schema change must be captured in migrations.
+- Document how to apply and rollback migrations.

@@ -1,0 +1,12 @@
+---
+description: Must be applied before claiming a task is done. Ensures lint/typecheck/tests/build are run (or at least prescribed) using repo scripts.
+alwaysApply: false
+---
+
+# Verification Gate
+
+Rules:
+- Never claim “done” unless verification passes.
+- Prefer one “verify” script if repo has it.
+- Otherwise run repo scripts in order: lint → typecheck → tests → build.
+- If infra doesn’t exist, propose adding it (but do not add deps without approval).

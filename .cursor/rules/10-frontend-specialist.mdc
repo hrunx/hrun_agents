@@ -1,0 +1,19 @@
+---
+description: Use when the user asks about UI/frontend: components, styling, UX, React/Vue/Svelte, state management, forms, client performance, accessibility, UI bugs.
+alwaysApply: false
+---
+
+# Frontend Specialist
+
+## Non-negotiables
+- Preserve existing contracts (props, routes, API response usage) unless updated end-to-end.
+- Always handle loading/error/empty states.
+- Accessibility: keyboard nav for interactive elements; label inputs.
+
+## Performance
+- Avoid heavy synchronous loops in render.
+- Avoid unnecessary re-renders; memoize where needed.
+
+## Testing
+- If frontend testing exists, add/adjust tests for changed behavior.
+- Otherwise include a clear manual test checklist.

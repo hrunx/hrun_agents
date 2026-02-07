@@ -1,0 +1,49 @@
+name: verify
+
+on:
+  pull_request:
+  push:
+    branches: [ main, master ]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node (if package.json exists)
+        if: ${{ hashFiles('package.json') != '' }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install deps (Node)
+        if: ${{ hashFiles('package.json') != '' }}
+        run: |
+          npm ci
+
+      - name: Verify (custom script if present)
+        if: ${{ hashFiles('scripts/verify') != '' }}
+        run: |
+          chmod +x scripts/verify
+          ./scripts/verify
+
+      - name: Lint
+        if: ${{ hashFiles('package.json') != '' }}
+        run: |
+          npm run lint --if-present
+
+      - name: Typecheck
+        if: ${{ hashFiles('package.json') != '' }}
+        run: |
+          npm run typecheck --if-present
+
+      - name: Tests
+        if: ${{ hashFiles('package.json') != '' }}
+        run: |
+          npm test --if-present
+
+      - name: Build
+        if: ${{ hashFiles('package.json') != '' }}
+        run: |
+          npm run build --if-present

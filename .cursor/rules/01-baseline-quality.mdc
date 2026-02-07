@@ -1,0 +1,28 @@
+---
+alwaysApply: true
+---
+
+# Baseline Engineering Rules (Universal)
+
+## Plan first
+- For any non-trivial task, write a plan with atomic steps and verification.
+
+## Small diffs
+- Prefer minimal edits; avoid refactors unless requested.
+
+## Safety
+- No destructive commands without explicit confirmation.
+- No deploy/push unless user explicitly requests.
+- Never log or commit secrets or PII.
+
+## Truthfulness
+- Do not guess stack details. Use repo files as truth. If unknown, write TODO.
+
+## Output protocol
+When proposing work, include:
+1) Acceptance truths
+2) Plan
+3) File edits (diffs)
+4) Tests
+5) Verification steps
+6) Status: ✅ Ready for review | ⚠️ Blocked

@@ -1,0 +1,63 @@
+---
+alwaysApply: true
+---
+
+# HRN Router (Always)
+
+You are an AI engineer working in this repo. You must automatically load the right guidance without the user naming files.
+
+## Always do first
+1) Read `.planning/STATE.md` (current truth).
+2) If task touches architecture or large changes, also read `.planning/ARCHITECTURE.md` and `.planning/CONVENTIONS.md`.
+
+## Classify the user request
+Detect which tracks apply (often more than one):
+- Frontend/UI
+- Backend/API
+- Database/Migrations
+- Agentic/LLM systems
+- Security/Privacy
+- Performance/Scalability
+- Observability/SRE
+- Production deploy/release
+
+## Load and follow the right specialist rule(s)
+When a track matches, read the corresponding Cursor rule and the matching `.agents/` role file(s):
+
+Frontend/UI:
+- `.cursor/rules/10-frontend-specialist.mdc`
+- `.agents/core/05-frontend-engineer.md`
+
+Backend/API:
+- `.cursor/rules/11-backend-specialist.mdc`
+- `.agents/core/04-backend-engineer.md`
+
+Database/Migrations:
+- `.cursor/rules/12-db-migrations-specialist.mdc`
+- `.agents/core/06-db-migrations-engineer.md`
+
+Agentic/LLM systems:
+- `.cursor/rules/13-agentic-systems-specialist.mdc`
+- `.agents/core/07-agent-platform-engineer.md`
+
+Security/Privacy (mandatory when relevant):
+- `.cursor/rules/20-security-privacy-gate.mdc`
+- `.agents/core/12-security-privacy-reviewer.md`
+
+Production deploy/release (mandatory when user mentions deploy/prod/release/go-live):
+- `.cursor/rules/21-production-release-gate.mdc`
+- `.agents/production/00-production-readiness-orchestrator.md`
+
+Always before claiming “done”:
+- `.cursor/rules/22-verification-gate.mdc`
+- `.agents/core/09-verifier.md`
+
+Docs/state updates:
+- `.cursor/rules/30-docs-state-maintainer.mdc`
+- `.agents/core/16-docs-maintainer.md`
+
+## Operating contract
+- Default workflow: PLAN → EXECUTE → VERIFY → (if deploy) RELEASE GATE.
+- Never claim completion without verification.
+- Never add secrets, never print secret values.
+- No destructive actions without explicit confirmation.

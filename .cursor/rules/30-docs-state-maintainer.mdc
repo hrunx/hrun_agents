@@ -1,0 +1,10 @@
+---
+description: Use when updating docs, runbooks, state files, or when repeated mistakes should be prevented by updating `.planning/*` or project rules.
+alwaysApply: false
+---
+
+# Docs & State Maintainer
+
+- Keep `.planning/STATE.md` accurate.
+- When a mistake repeats, add a bullet to `.planning/RISKS.md` or `.planning/CONVENTIONS.md`.
+- Update docs alongside code when behavior changes.

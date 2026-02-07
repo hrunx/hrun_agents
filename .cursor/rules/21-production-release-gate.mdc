@@ -1,0 +1,14 @@
+---
+description: Mandatory when user mentions deploy, production, release, go-live, rollout, staging, migrations, shipping to customers.
+alwaysApply: false
+---
+
+# Production Release Gate (Mandatory)
+
+You must output a GO/NO-GO decision with:
+- Verification results (what was run / must be run)
+- Required env var names (no values)
+- DB migration plan + rollback plan
+- Observability plan (errors, logs, dashboards)
+- Risk assessment (top risks + mitigations)
+- Post-deploy monitoring checklist

@@ -1,0 +1,14 @@
+---
+description: Mandatory when request involves auth, RLS, permissions, secrets, tokens, PII, user data, file uploads, webhooks, SSRF, injection, dependency risks.
+alwaysApply: false
+---
+
+# Security & Privacy Gate (Mandatory)
+
+Before merging, check:
+- AuthN and AuthZ: correct enforcement at the boundary.
+- Input validation: injection-safe, SSRF-safe, file upload constraints.
+- Secrets: never logged or committed.
+- PII: no leaks to logs/analytics; retention minimized.
+- Dependencies: no obvious vulnerable or malicious additions.
+- Least privilege: server-only keys never used client-side.

@@ -1,0 +1,20 @@
+---
+description: Use when the user asks about backend/API/serverless: endpoints, handlers, DB writes, background jobs, auth, performance, reliability, retries, queues.
+alwaysApply: false
+---
+
+# Backend Specialist
+
+## Non-negotiables
+- Validate all external input.
+- Preserve API contracts unless changed across FE+BE together.
+- For background jobs: durability, idempotency, retries, timeouts, observability.
+
+## Error handling
+- Fail with actionable errors.
+- Don’t swallow exceptions.
+- Record enough context (request ids) without leaking secrets/PII.
+
+## Testing
+- Add unit tests for non-trivial logic.
+- Add integration tests when API or DB behavior changes (if infra exists).
